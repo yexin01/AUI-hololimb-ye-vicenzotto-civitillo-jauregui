@@ -93,6 +93,9 @@ public class GoalManager : MonoBehaviour
     [SerializeField]
     ObjectSpawner m_ObjectSpawner;
 
+    [SerializeField]
+    GameObject m_MainMenu; // Reference to the Main Menu
+
     const int k_NumberOfSurfacesTappedToCompleteGoal = 1;
     Vector3 m_TargetOffset = new Vector3(-.5f, -.25f, 1.5f);
 
@@ -131,7 +134,7 @@ public class GoalManager : MonoBehaviour
 
         if (m_LearnButton != null)
         {
-            m_LearnButton.GetComponent<Button>().onClick.AddListener(OpenModal); ;
+            m_LearnButton.GetComponent<Button>().onClick.AddListener(OpenModal);
             m_LearnButton.SetActive(false);
         }
 
@@ -170,8 +173,6 @@ public class GoalManager : MonoBehaviour
             m_LearnModal.transform.localScale = Vector3.zero;
         }
     }
-
-
 
     void Update()
     {
@@ -212,55 +213,34 @@ public class GoalManager : MonoBehaviour
         }
     }
 
-    void CompleteGoal()
+void CompleteGoal()
+{
+    if (m_CurrentGoalIndex == m_StepList.Count - 1) // Ultimo Step
     {
-        if (m_CurrentGoal.CurrentGoal == OnboardingGoals.TapSurface)
-            m_ObjectSpawner.objectSpawned -= OnObjectSpawned;
-
-        // disable tooltips before setting next goal
-        DisableTooltips();
-
-        m_CurrentGoal.Completed = true;
-        m_CurrentGoalIndex++;
-        if (m_OnboardingGoals.Count > 0)
+        // Se è l'ultimo step (Done), attiva il Main Menu e disattiva la Coaching UI
+        if (m_MainMenu != null)
         {
-            m_CurrentGoal = m_OnboardingGoals.Dequeue();
-            m_StepList[m_CurrentGoalIndex - 1].stepObject.SetActive(false);
-            m_StepList[m_CurrentGoalIndex].stepObject.SetActive(true);
-            m_StepButtonTextField.text = m_StepList[m_CurrentGoalIndex].buttonText;
-            m_SkipButton.SetActive(m_StepList[m_CurrentGoalIndex].includeSkipButton);
+            Debug.Log("Activating Main Menu and closing Coaching UI");
+            m_MainMenu.SetActive(true); // Attiva il Main Menu
         }
-        else
-        {
-            m_AllGoalsFinished = true;
-            ForceEndAllGoals();
-        }
-
-        if (m_CurrentGoal.CurrentGoal == OnboardingGoals.FindSurfaces)
-        {
-            if (m_FadeMaterial != null)
-                m_FadeMaterial.FadeSkybox(true);
-
-            if (m_PassthroughToggle != null)
-                m_PassthroughToggle.isOn = true;
-
-            if (m_LearnButton != null)
-            {
-                m_LearnButton.SetActive(true);
-            }
-
-            StartCoroutine(TurnOnPlanes());
-        }
-        else if (m_CurrentGoal.CurrentGoal == OnboardingGoals.TapSurface)
-        {
-            if (m_LearnButton != null)
-            {
-                m_LearnButton.SetActive(false);
-            }
-            m_SurfacesTapped = 0;
-            m_ObjectSpawner.objectSpawned += OnObjectSpawned;
-        }
+        m_CoachingUIParent.SetActive(false); // Disattiva la Coaching UI
+        return; // Esci dal metodo per evitare di processare ulteriormente
     }
+
+    // Procedi con il prossimo step
+    m_CurrentGoal.Completed = true;
+    m_CurrentGoalIndex++;
+    if (m_OnboardingGoals.Count > 0)
+    {
+        m_CurrentGoal = m_OnboardingGoals.Dequeue();
+
+        // Disattiva il pannello corrente e attiva il successivo
+        m_StepList[m_CurrentGoalIndex - 1].stepObject.SetActive(false); // Disattiva lo step precedente
+        m_StepList[m_CurrentGoalIndex].stepObject.SetActive(true); // Attiva il prossimo step
+        m_StepButtonTextField.text = m_StepList[m_CurrentGoalIndex].buttonText; // Aggiorna il testo del bottone
+        m_SkipButton.SetActive(m_StepList[m_CurrentGoalIndex].includeSkipButton); // Aggiorna il pulsante Skip
+    }
+}
 
     public IEnumerator TurnOnPlanes()
     {
@@ -292,7 +272,6 @@ public class GoalManager : MonoBehaviour
 
         if (m_VideoPlayerToggle != null)
             m_VideoPlayerToggle.isOn = true;
-
 
         if (m_FadeMaterial != null)
         {
@@ -415,7 +394,6 @@ public class GoalManager : MonoBehaviour
         newTransform.rotation = targetRotation;
         var targetPosition = target.position + newTransform.TransformVector(m_TargetOffset);
         m_VideoPlayer.transform.position = targetPosition;
-
 
         var forward = target.position - m_VideoPlayer.transform.position;
         var targetPlayerRotation = forward.sqrMagnitude > float.Epsilon ? Quaternion.LookRotation(forward, Vector3.up) : Quaternion.identity;
