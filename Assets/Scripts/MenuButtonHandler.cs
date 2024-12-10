@@ -1,43 +1,81 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.XR;
+using UnityEngine.InputSystem; // For keyboard input
+using UnityEngine.XR; // For XR InputDevices
 
 public class MenuButtonHandler : MonoBehaviour
 {
-    public GameObject mainMenu; // Assegna il tuo Main Menu Setup qui nell'Inspector
+    public GameObject mainMenu; // Assign your Main Menu Setup here in the Inspector
+    private bool isMenuButtonPressed = false; // To track button press state
 
     private void Update()
     {
-        // Controlla se il pulsante "menu" del controller è stato premuto
-        if (Keyboard.current.escapeKey.wasPressedThisFrame || // Per il test su PC
-            XRControllerInput.GetMenuButton()) // Funzione per il controller VR
+        // Only toggle menu if the proper input is detected
+        if (Keyboard.current.escapeKey.isPressed || // For PC testing
+            IsMenuButtonPressed() ||
+            (IsPinchGestureDetected() && !isMenuButtonPressed)) // Pinch gesture only works once per press
         {
-            ToggleMenu();
+            if (!isMenuButtonPressed)
+            {
+                ToggleMenu();
+                isMenuButtonPressed = true; // Mark as pressed
+            }
+        }
+        else
+        {
+            isMenuButtonPressed = false; // Reset when inputs are released
         }
     }
 
     private void ToggleMenu()
     {
-        // Cambia lo stato di attivazione del menu
         if (mainMenu != null)
         {
             mainMenu.SetActive(!mainMenu.activeSelf);
+            Debug.Log("Menu toggled. New state: " + mainMenu.activeSelf);
+        }
+        else
+        {
+            Debug.LogError("Main Menu is not assigned in the Inspector!");
         }
     }
-}
 
-// Classe Helper per input VR
-public static class XRControllerInput
-{
-    public static bool GetMenuButton()
+    private bool IsMenuButtonPressed()
     {
-        // Ottiene lo stato dei pulsanti del controller
-        var leftHand = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
-        var rightHand = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        var leftHand = UnityEngine.XR.InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+        var rightHand = UnityEngine.XR.InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
 
-        bool isLeftHandMenuButtonPressed = leftHand.TryGetFeatureValue(UnityEngine.XR.CommonUsages.menuButton, out bool leftMenuPressed) && leftMenuPressed;
-        bool isRightHandMenuButtonPressed = rightHand.TryGetFeatureValue(UnityEngine.XR.CommonUsages.menuButton, out bool rightMenuPressed) && rightMenuPressed;
+        bool leftMenuPressed = leftHand.TryGetFeatureValue(UnityEngine.XR.CommonUsages.menuButton, out bool leftPressed) && leftPressed;
+        bool rightMenuPressed = rightHand.TryGetFeatureValue(UnityEngine.XR.CommonUsages.menuButton, out bool rightPressed) && rightPressed;
 
-        return isLeftHandMenuButtonPressed || isRightHandMenuButtonPressed;
+        if (leftMenuPressed || rightMenuPressed)
+        {
+            Debug.Log("Menu button pressed!{menuButtonPressed}");
+        }
+
+        return leftMenuPressed || rightMenuPressed;
+    }
+
+    private bool IsPinchGestureDetected()
+    {
+        // Check for hand tracking pinch gesture
+        var leftHand = UnityEngine.XR.InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+        var rightHand = UnityEngine.XR.InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+
+        // Check for a valid pinch on left or right hand
+        return IsPinching(leftHand) || IsPinching(rightHand);
+    }
+
+    private bool IsPinching(UnityEngine.XR.InputDevice handDevice)
+    {
+        if (!handDevice.isValid) return false;
+
+        // Pinch detection for hand tracking
+        if (handDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.grip, out float gripValue))
+        {
+            // Adjust the threshold for detecting a "pinch" gesture
+            return gripValue > 0.8f; // Customize threshold
+        }
+
+        return false;
     }
 }
