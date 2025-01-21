@@ -1,0 +1,10 @@
+# ninja log v5
+18	917	7591600334853027	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	81a2e2e2061a2d34
+0	934	7591600335093381	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	158b6fec45288974
+22	951	7591600335282315	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	5eeb4f1daec5b3f8
+14	1003	7591600335788110	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	ec3de0656dedd8da
+27	1012	7591600335845743	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	130544e393c8eaf1
+7	1069	7591600336399296	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	4d9c6f2d7da5fecc
+10	1192	7591600337663593	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	d32c5fc7b815edc2
+4	1262	7591600338379473	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	9c4028f31ce4dcc7
+1262	1385	7591600339666564	C:/Users/matti/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6g2x5y6w/obj/arm64-v8a/libgame.so	16b5d01cd876c037
