@@ -11,12 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Meta Movement/71.0.1/Body Tracking Samples/Scenes/MovementRetargeting.unity
     guid: fc2df0dac4e954244b6cd75ecbed5530
+  - enabled: 1
+    path: Assets/RightArmScene.unity
+    guid: 773979299b240405d98ea549022dedf0
   - enabled: 0
-    path: Assets/Scenes/Scene1.unity
-    guid: b1a765cdf04d941dda6f026fa7f53032
+    path: Assets/Scenes/scene1.unity
+    guid: cbb124ae5ec2d464f9ded7c0decab3f1
+  - enabled: 1
+    path: Assets/Scenes/LeftArmScene.unity
+    guid: 2884cbd0603544e5aac825792a48e18d
   - enabled: 0
     path: SceneTemplates/InMemory/a858567bab394f9ba21073c812f10c0a/Untitled.unity
     guid: 93a320ea156e4431c965ca6fe34ebf04

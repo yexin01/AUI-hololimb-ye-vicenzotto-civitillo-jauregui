@@ -1,0 +1,2 @@
+/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt

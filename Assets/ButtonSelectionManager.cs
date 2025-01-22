@@ -51,12 +51,12 @@ public class ButtonSelectionManager : MonoBehaviour
         // Se è selezionato "Left", carichiamo la Scena2
         if (isLeftSelected)
         {
-            SceneManager.LoadScene("SampleScene"); //TODO: Cambiare con il nome della scena
+            SceneManager.LoadScene("LeftArmScene"); //TODO: Cambiare con il nome della scena
         }
         // Altrimenti, se è selezionato "Right", carichiamo la Scena3
         else if (isRightSelected)
         {
-            SceneManager.LoadScene("MovementRetargeting"); //TODO: Cambiare con il nome della scena
+            SceneManager.LoadScene("RightArmScene"); //TODO: Cambiare con il nome della scena
         }
         else
         {

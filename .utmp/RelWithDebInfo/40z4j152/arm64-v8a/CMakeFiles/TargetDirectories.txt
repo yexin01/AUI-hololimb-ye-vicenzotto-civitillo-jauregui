@@ -1,0 +1,5 @@
+/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/.utmp/RelWithDebInfo/40z4j152/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/.utmp/RelWithDebInfo/40z4j152/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/.utmp/RelWithDebInfo/40z4j152/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/.utmp/RelWithDebInfo/40z4j152/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/.utmp/RelWithDebInfo/40z4j152/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

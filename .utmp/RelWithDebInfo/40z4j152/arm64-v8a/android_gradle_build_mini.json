@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt",
+    "/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/dariojauregui/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/.utmp/RelWithDebInfo/40z4j152/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/dariojauregui/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/.utmp/RelWithDebInfo/40z4j152/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "game::@d02bb112ea9f9c2ed29f": {
+      "artifactName": "game",
+      "abi": "arm64-v8a",
+      "output": "/Users/dariojauregui/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/40z4j152/obj/arm64-v8a/libgame.so",
+      "runtimeFiles": []
+    }
+  }
+}
