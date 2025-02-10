@@ -1,0 +1,2 @@
+C:\Users\Matteo\Desktop\matteo\programmazione\GitHub\AUI-hololimb-ye-vicenzotto-civitillo-jauregui\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\Matteo\Desktop\matteo\programmazione\GitHub\AUI-hololimb-ye-vicenzotto-civitillo-jauregui\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
