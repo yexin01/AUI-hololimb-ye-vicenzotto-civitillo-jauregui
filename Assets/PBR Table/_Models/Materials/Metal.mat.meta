@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: efa07ce449c439644942e3d00435374a
+timeCreated: 1519135466
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112005
+  packageName: Wooden PBR Table
+  packageVersion: 1.0
+  assetPath: Assets/PBR Table/_Models/Materials/Metal.mat
+  uploadId: 233663
