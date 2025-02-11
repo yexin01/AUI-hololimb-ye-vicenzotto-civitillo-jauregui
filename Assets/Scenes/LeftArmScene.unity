@@ -3799,7 +3799,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Environment: {fileID: 998742546}
-  fadeSpeed: 1
+  Table: {fileID: 1017536094}
+  Chair: {fileID: 1248327236}
+  fadeSpeed: 0.5
 --- !u!114 &1013177789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3831,6 +3833,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _handType: 1
   _showState: 0
+--- !u!1 &1017536094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1950602138877448, guid: 00284cf2de272b74d864cac5ee59c480, type: 3}
+  m_PrefabInstance: {fileID: 1949218742}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1017536095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4154779130590934, guid: 00284cf2de272b74d864cac5ee59c480, type: 3}
@@ -4863,6 +4870,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 801559142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1248327236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000013439107638, guid: 5009eca976e988c4897ba76fd171b10a, type: 3}
+  m_PrefabInstance: {fileID: 1847979023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1248327238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010708568644, guid: 5009eca976e988c4897ba76fd171b10a, type: 3}
