@@ -5,6 +5,8 @@ public class FadeMaterial : MonoBehaviour
 {
     // attached game object for fading
     public GameObject Environment;
+    public GameObject Table;
+    public GameObject Chair;
 
     // fade speed length
     public float fadeSpeed;
@@ -35,6 +37,9 @@ public class FadeMaterial : MonoBehaviour
                 yield return null;
             }
             rend.material.SetFloat("_Alpha", 0f);
+            Table.SetActive(false);
+            Chair.SetActive(false);
+
         }
         else if (!visible)
         {
@@ -46,6 +51,8 @@ public class FadeMaterial : MonoBehaviour
                 yield return null;
             }
             rend.material.SetFloat("_Alpha", 1f);
+            Table.SetActive(true);
+            Chair.SetActive(true);
         }
     }
 }
