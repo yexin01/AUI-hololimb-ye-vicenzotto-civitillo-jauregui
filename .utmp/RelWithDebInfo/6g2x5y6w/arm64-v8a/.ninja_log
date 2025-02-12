@@ -1,10 +1,10 @@
 # ninja log v5
-18	917	7591600334853027	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	81a2e2e2061a2d34
-0	934	7591600335093381	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	158b6fec45288974
-22	951	7591600335282315	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	5eeb4f1daec5b3f8
-14	1003	7591600335788110	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	ec3de0656dedd8da
-27	1012	7591600335845743	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	130544e393c8eaf1
-7	1069	7591600336399296	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	4d9c6f2d7da5fecc
-10	1192	7591600337663593	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	d32c5fc7b815edc2
-4	1262	7591600338379473	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	9c4028f31ce4dcc7
-1262	1385	7591600339666564	C:/Users/matti/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6g2x5y6w/obj/arm64-v8a/libgame.so	16b5d01cd876c037
+13	1478	7610633422035710	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	581a1c38efc39f5c
+28	1512	7610633422389598	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	907d2335564330ad
+5	1522	7610633422461436	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	5dbc00ec33012d08
+22	1628	7610633423537680	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	ee6bc55f207daa2e
+32	1656	7610633423738797	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	7a791ec6b68a3bb8
+0	1720	7610633424253515	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	5fbbf2a8bec619a
+17	1937	7610633426611817	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	62116a37e3bdb62d
+9	2098	7610633428246479	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	65f9bad5b0c68890
+2098	2257	7610633429960447	C:/Users/matti/Documents/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6g2x5y6w/obj/arm64-v8a/libgame.so	e2f3dfdeb5abcec5
