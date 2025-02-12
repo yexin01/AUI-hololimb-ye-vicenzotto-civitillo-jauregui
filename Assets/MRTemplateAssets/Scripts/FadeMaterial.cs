@@ -8,6 +8,7 @@ public class FadeMaterial : MonoBehaviour
     public GameObject Table;
     public GameObject Chair;
     public GameObject Ball;
+    public GameObject Floor;
 
     // fade speed length
     public float fadeSpeed;
@@ -41,6 +42,7 @@ public class FadeMaterial : MonoBehaviour
             Table.SetActive(false);
             Chair.SetActive(false);
             Ball.SetActive(false);
+            Floor.SetActive(false);
         }
         else if (!visible)
         {
@@ -55,6 +57,7 @@ public class FadeMaterial : MonoBehaviour
             Table.SetActive(true);
             Chair.SetActive(true);
             Ball.SetActive(true);
+            Floor.SetActive(true);
         }
     }
 }

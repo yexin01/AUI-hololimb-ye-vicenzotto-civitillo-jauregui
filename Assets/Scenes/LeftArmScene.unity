@@ -7423,6 +7423,7 @@ MonoBehaviour:
   Table: {fileID: 1017536094}
   Chair: {fileID: 1248327236}
   Ball: {fileID: 1539934965}
+  Floor: {fileID: 225254967}
   fadeSpeed: 0.5
 --- !u!114 &1013177789
 MonoBehaviour:
