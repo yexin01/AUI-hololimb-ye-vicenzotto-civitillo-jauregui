@@ -5,6 +5,10 @@ public class ChangeArmOpacity : MonoBehaviour
 {
     // Assign these in the Inspector
     public Material ArmMaterial; // The material whose opacity you want to control
+    public Button button100; 
+    public Button button70;
+    public Button button40;
+    public Button button10;
 
     public void SetOpacity100()
     {
@@ -18,6 +22,7 @@ public class ChangeArmOpacity : MonoBehaviour
 
             // Assign the modified color back to the material
             ArmMaterial.color = color;
+            UpdateButtonVisuals(button100);
 
             Debug.Log($"ArmMaterial opacity set to 100%.");
         }
@@ -39,6 +44,7 @@ public class ChangeArmOpacity : MonoBehaviour
 
             // Assign the modified color back to the material
             ArmMaterial.color = color;
+            UpdateButtonVisuals(button70);
 
             Debug.Log($"ArmMaterial opacity set to 70%.");
         }
@@ -60,6 +66,7 @@ public class ChangeArmOpacity : MonoBehaviour
 
             // Assign the modified color back to the material
             ArmMaterial.color = color;
+            UpdateButtonVisuals(button40);
 
             Debug.Log($"ArmMaterial opacity set to 40%.");
         }
@@ -81,6 +88,7 @@ public class ChangeArmOpacity : MonoBehaviour
 
             // Assign the modified color back to the material
             ArmMaterial.color = color;
+            UpdateButtonVisuals(button10);
 
             Debug.Log($"ArmMaterial opacity set to 10%.");
         }
@@ -90,4 +98,21 @@ public class ChangeArmOpacity : MonoBehaviour
         }
     }
 
+    private void UpdateButtonVisuals(Button selected)
+    {
+        Color selectedColor = Color.blue;
+        Color defaultColor = Color.white;
+
+        foreach (Button button in new Button[] { button100, button70, button40, button10 })
+        {
+            if (button == selected)
+            {
+                button.image.color = selectedColor;
+            }
+            else
+            {
+                button.image.color = defaultColor;
+            }
+        }
+    }
 }
