@@ -5,14 +5,14 @@
   ],
   "cleanCommandsComponents": [
     [
-      "/Applications/Unity/Hub/Editor/6000.0.26f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja",
+      "/Applications/Unity/Hub/Editor/6000.0.27f1-arm64/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja",
       "-C",
       "/Users/xinye/Unity/HOLOLIMB/.utmp/RelWithDebInfo/3w5y6z6j/arm64-v8a",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
-    "/Applications/Unity/Hub/Editor/6000.0.26f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja",
+    "/Applications/Unity/Hub/Editor/6000.0.27f1-arm64/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja",
     "-C",
     "/Users/xinye/Unity/HOLOLIMB/.utmp/RelWithDebInfo/3w5y6z6j/arm64-v8a",
     "{LIST_OF_TARGETS_TO_BUILD}"
@@ -28,8 +28,8 @@
   },
   "toolchains": {
     "toolchain": {
-      "cCompilerExecutable": "/Applications/Unity/Hub/Editor/6000.0.26f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
-      "cppCompilerExecutable": "/Applications/Unity/Hub/Editor/6000.0.26f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+      "cCompilerExecutable": "/Applications/Unity/Hub/Editor/6000.0.27f1-arm64/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Applications/Unity/Hub/Editor/6000.0.27f1-arm64/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
     }
   },
   "cFileExtensions": [],
