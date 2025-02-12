@@ -1,10 +1,19 @@
 # ninja log v5
 36	6216	7608899907029590	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	85eadbf17ebe17c1
+10	6437	7608899909861837	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	84767e173570c5d0
 42	6260	7608899907877475	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	17d73633a8742c6a
+50	6365	7608899909138325	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4b0230419473b992
 1	6314	7608899908429680	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	68348afb5b14dfd7
 30	6345	7608899908841717	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	39c7899281dfcbda
-50	6365	7608899909138325	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4b0230419473b992
-10	6437	7608899909861837	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	84767e173570c5d0
 23	6621	7608899911747122	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	20c46679346eef16
 17	6757	7608899913093493	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	f89fa65bf6a637d8
 6758	6903	7608899914545606	C:/Users/Matteo/Desktop/matteo/programmazione/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5l215w6d/obj/arm64-v8a/libgame.so	6ea246febc0a68c6
+25	1851	7610724780464261	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	85eadbf17ebe17c1
+6	1895	7610724780899486	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	68348afb5b14dfd7
+37	1909	7610724781110691	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	17d73633a8742c6a
+18	2006	7610724782124994	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	39c7899281dfcbda
+44	2028	7610724782305422	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4b0230419473b992
+13	2146	7610724783560079	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	84767e173570c5d0
+31	2277	7610724784909907	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	20c46679346eef16
+1	2417	7610724786335299	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	f89fa65bf6a637d8
+2417	2699	7610724789164139	C:/Users/Matteo/Desktop/matteo/programmazione/GitHub/AUI-hololimb-ye-vicenzotto-civitillo-jauregui/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5l215w6d/obj/arm64-v8a/libgame.so	6ea246febc0a68c6
