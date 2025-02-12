@@ -14,17 +14,18 @@ public class ChangeArmOpacity : MonoBehaviour
     {
         if (ArmMaterial != null)
         {
-            // Get the current color of the material
-            Color color = ArmMaterial.color;
+            ArmMaterial.SetFloat("_Surface", 0); // 0 = Opaque, 1 = Transparent
+            ArmMaterial.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Geometry;
+            ArmMaterial.SetShaderPassEnabled("Transparent", false);
+            ArmMaterial.SetShaderPassEnabled("ShadowCaster", true);
+            ArmMaterial.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.One);
+            ArmMaterial.SetFloat("_DstBlend", (float)UnityEngine.Rendering.BlendMode.Zero);
+            ArmMaterial.SetFloat("_ZWrite", 1);
 
-            // Set the alpha value
-            color.a = 1.00F;
-
-            // Assign the modified color back to the material
-            ArmMaterial.color = color;
+            // Ensure the changes apply immediately
+            ArmMaterial.EnableKeyword("_SURFACE_TYPE_OPAQUE");
+            ArmMaterial.DisableKeyword("_SURFACE_TYPE_TRANSPARENT");
             UpdateButtonVisuals(button100);
-
-            Debug.Log($"ArmMaterial opacity set to 100%.");
         }
         else
         {
@@ -36,6 +37,17 @@ public class ChangeArmOpacity : MonoBehaviour
     {
         if (ArmMaterial != null)
         {
+            ArmMaterial.SetFloat("_Surface", 1); // 1 = Transparent
+            ArmMaterial.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+            ArmMaterial.SetShaderPassEnabled("Transparent", true);
+            ArmMaterial.SetShaderPassEnabled("ShadowCaster", false);
+            ArmMaterial.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.SrcAlpha);
+            ArmMaterial.SetFloat("_DstBlend", (float)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+            ArmMaterial.SetFloat("_ZWrite", 0);
+
+            ArmMaterial.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");
+            ArmMaterial.DisableKeyword("_SURFACE_TYPE_OPAQUE");
+
             // Get the current color of the material
             Color color = ArmMaterial.color;
 
@@ -58,6 +70,17 @@ public class ChangeArmOpacity : MonoBehaviour
     {
         if (ArmMaterial != null)
         {
+            ArmMaterial.SetFloat("_Surface", 1); // 1 = Transparent
+            ArmMaterial.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+            ArmMaterial.SetShaderPassEnabled("Transparent", true);
+            ArmMaterial.SetShaderPassEnabled("ShadowCaster", false);
+            ArmMaterial.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.SrcAlpha);
+            ArmMaterial.SetFloat("_DstBlend", (float)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+            ArmMaterial.SetFloat("_ZWrite", 0);
+
+            ArmMaterial.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");
+            ArmMaterial.DisableKeyword("_SURFACE_TYPE_OPAQUE");
+
             // Get the current color of the material
             Color color = ArmMaterial.color;
 
@@ -80,6 +103,17 @@ public class ChangeArmOpacity : MonoBehaviour
     {
         if (ArmMaterial != null)
         {
+            ArmMaterial.SetFloat("_Surface", 1); // 1 = Transparent
+            ArmMaterial.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+            ArmMaterial.SetShaderPassEnabled("Transparent", true);
+            ArmMaterial.SetShaderPassEnabled("ShadowCaster", false);
+            ArmMaterial.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.SrcAlpha);
+            ArmMaterial.SetFloat("_DstBlend", (float)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+            ArmMaterial.SetFloat("_ZWrite", 0);
+
+            ArmMaterial.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");
+            ArmMaterial.DisableKeyword("_SURFACE_TYPE_OPAQUE");
+
             // Get the current color of the material
             Color color = ArmMaterial.color;
 
