@@ -13,11 +13,11 @@ public class MenuManager : MonoBehaviour
             // Calcola la nuova posizione rispetto alla fotocamera principale
             Vector3 cameraPos = Camera.main.transform.position;
             Vector3 rightDirection = Camera.main.transform.right; // Usa la direzione destra della fotocamera
-            Vector3 newPos = cameraPos + rightDirection * offsetDistance;
+            Vector3 newPos = cameraPos - rightDirection * offsetDistance;
             menu.transform.position = newPos;
 
             // Ruota il menu di 90 gradi sull'asse Y
-            menu.transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y + 90, 0);
+            menu.transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y - 90, 0);
         }
     }
 
@@ -27,6 +27,15 @@ public class MenuManager : MonoBehaviour
         if (lazyFollow != null)
         {
             lazyFollow.enabled = false;
+        }
+    }
+
+        public void ActivateLazyFollow()
+    {
+        LazyFollow lazyFollow = menu.GetComponent<LazyFollow>();
+        if (lazyFollow != null)
+        {
+            lazyFollow.enabled = true;
         }
     }
 }

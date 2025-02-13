@@ -3,13 +3,12 @@ using UnityEngine;
 
 public class FadeMaterial : MonoBehaviour
 {
-    // attached game object for fading
+    // attached game objects for fading
     public GameObject Environment;
     public GameObject Table;
     public GameObject Chair;
-    public GameObject Ball;
     public GameObject Floor;
-
+    
     // fade speed length
     public float fadeSpeed;
 
@@ -23,15 +22,16 @@ public class FadeMaterial : MonoBehaviour
         m_FadeCoroutine = StartCoroutine(Fade(visible));
     }
 
-    //Fade Coroutine
-    public IEnumerator Fade(bool visible)
+    // Fade Coroutine
+    private IEnumerator Fade(bool visible)
     {
         Renderer rend = Environment.transform.GetComponent<Renderer>();
         float alphaValue = rend.material.GetFloat("_Alpha");
+        GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
 
         if (visible)
         {
-            //while loop to deincrement Alpha value until object is invisible
+            // Decrement Alpha value until object is invisible
             while (rend.material.GetFloat("_Alpha") > 0f)
             {
                 alphaValue -= Time.deltaTime / fadeSpeed;
@@ -41,12 +41,17 @@ public class FadeMaterial : MonoBehaviour
             rend.material.SetFloat("_Alpha", 0f);
             Table.SetActive(false);
             Chair.SetActive(false);
-            Ball.SetActive(false);
             Floor.SetActive(false);
+            
+            // Disattiva tutte le Ball
+            foreach (GameObject ball in balls)
+            {
+                ball.SetActive(false);
+            }
         }
-        else if (!visible)
+        else
         {
-            //while loop to increment object Alpha value until object is opaque
+            // Increment Alpha value until object is opaque
             while (rend.material.GetFloat("_Alpha") < 1f)
             {
                 alphaValue += Time.deltaTime / fadeSpeed;
@@ -56,8 +61,13 @@ public class FadeMaterial : MonoBehaviour
             rend.material.SetFloat("_Alpha", 1f);
             Table.SetActive(true);
             Chair.SetActive(true);
-            Ball.SetActive(true);
             Floor.SetActive(true);
+            
+            // Attiva tutte le Ball
+            foreach (GameObject ball in balls)
+            {
+                ball.SetActive(true);
+            }
         }
     }
 }
