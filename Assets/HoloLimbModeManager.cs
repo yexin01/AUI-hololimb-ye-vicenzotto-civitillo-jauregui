@@ -30,7 +30,7 @@ public class HoloLimbModeManager : MonoBehaviour
 
     private void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.One))
+        if (OVRInput.GetDown(OVRInput.Button.Two))
         {
             ToggleMode();
         }
