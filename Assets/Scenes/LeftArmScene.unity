@@ -167,6 +167,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1983040090}
   spawnButton: {fileID: 1101638097}
   resetButton: {fileID: 906942376}
+  passthroughToggle: {fileID: 0}
 --- !u!1 &102782003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,8 +2757,7 @@ MeshRenderer:
   m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8316,7 +8316,6 @@ MonoBehaviour:
   Environment: {fileID: 998742546}
   Table: {fileID: 1017536094}
   Chair: {fileID: 1248327236}
-  Ball: {fileID: 1539934965}
   Floor: {fileID: 225254967}
   fadeSpeed: 0.5
 --- !u!114 &1013177789
