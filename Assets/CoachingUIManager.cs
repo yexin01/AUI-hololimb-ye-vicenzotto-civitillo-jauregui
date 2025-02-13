@@ -9,6 +9,7 @@ public class CoachingUIManager : MonoBehaviour
     [Header("UI References")]
     public GameObject coachingUI;  // Il pannello Coaching UI
     public GameObject mainMenu;    // Il menu principale
+    public GameObject videoObject; // Oggetto Video
 
     [Header("Steps Management")]
     public List<GameObject> steps = new List<GameObject>(); // Lista delle schede del coaching
@@ -51,6 +52,16 @@ public class CoachingUIManager : MonoBehaviour
         currentStepIndex++;
         steps[currentStepIndex].SetActive(true);
 
+        // Gestione dell'oggetto Video
+        if (currentStepIndex == 1) // Step 2 (indice 1)
+        {
+            videoObject.SetActive(true);
+        }
+        else if (currentStepIndex == 2) // Step 3 (indice 2)
+        {
+            videoObject.SetActive(false);
+        }
+
         // Aggiorna il testo del pulsante Continue se siamo all'ultimo step
         if (currentStepIndex == steps.Count - 1)
         {
@@ -86,6 +97,9 @@ public class CoachingUIManager : MonoBehaviour
         {
             steps[i].SetActive(i == 0);
         }
+
+        // Assicura che l'oggetto Video sia disattivato all'inizio
+        videoObject.SetActive(false);
 
         // Reset del testo del pulsante Continue
         if (continueButtonText != null)
